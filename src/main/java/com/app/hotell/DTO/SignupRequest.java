@@ -1,12 +1,14 @@
 package com.app.hotell.DTO;
 
 public class SignupRequest {
-    private String username; 
-    private String name; 
-    private String password; 
-    private String email; 
+    private String username;
+    private String name;
+    private String password;
+    private String email;
     private String phone;
+    private String role; // Added for assigning USER or ADMIN
 
+    // Getters and Setters
     public String getUsername() {
         return username;
     }
@@ -46,6 +48,12 @@ public class SignupRequest {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    
-    
+
+    public String getRole() {  // Getter for role
+        return role;
+    }
+
+    public void setRole(String role) {  // Setter for role
+        this.role = role;
+    }
 }

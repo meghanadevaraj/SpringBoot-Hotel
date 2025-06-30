@@ -28,7 +28,9 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setEmail(request.getEmail());
         user.setPhone(request.getPhone());
-        
+
+        // ✅ Add this line to support USER/ADMIN role
+        user.setRole(request.getRole() != null ? request.getRole().toUpperCase() : "USER");
 
         userRepository.save(user);
     }
